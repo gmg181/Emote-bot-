@@ -10,13 +10,6 @@ from Pb2 import DEcwHisPErMsG_pb2 , MajoRLoGinrEs_pb2 , PorTs_pb2 , MajoRLoGinrE
 from cfonts import render, say
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return "Bot is running successfully!"
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=10000)
-
 
 
 
@@ -725,5 +718,10 @@ async def StarTinG():
         except asyncio.TimeoutError: print("Token ExpiRed ! , ResTartinG")
         except Exception as e: print(f"ErroR TcP - {e} => ResTarTinG ...")
 
-if __name__ == '__main__':
-    asyncio.run(StarTinG())
+@app.route('/')
+def home():
+    return "Bot is running successfully!"
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=10000)
+	
