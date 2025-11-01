@@ -2,13 +2,11 @@ import requests , os , psutil , sys , jwt , pickle , json , binascii , time , ur
 from protobuf_decoder.protobuf_decoder import Parser
 from xC4 import * ; from xHeaders import *
 from datetime import datetime
-from flask import Flask
 from google.protobuf.timestamp_pb2 import Timestamp
 from concurrent.futures import ThreadPoolExecutor
 from threading import Thread
 from Pb2 import DEcwHisPErMsG_pb2 , MajoRLoGinrEs_pb2 , PorTs_pb2 , MajoRLoGinrEq_pb2 , sQ_pb2 , Team_msg_pb2
 from cfonts import render, say
-app = Flask(__name__)
 
 
 
@@ -70,7 +68,7 @@ XP: {fix_num(data['xp'])}\n\n
 Failed to get info, please try again later!!
 
 °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-[FFB300][b][c]MADE BY SPIDEERIO YT
+[FFB300][b][c]MADE BY GMG YT
             """
             return msg
     except:
@@ -650,7 +648,7 @@ async def TcPChaT(ip, port, AutHToKen, key, iv, LoGinDaTaUncRypTinG, ready_event
                         if inPuTMsG in ("hi" , "hello" , "fen" , "help"):
                             uid = response.Data.uid
                             chat_id = response.Data.Chat_ID
-                            message = '[C][B][00FFFF]━━━━━━━━━━━━\n[ffd319][B]☂︎Add 100 Likes\n[FFFFFF]/like/(uid)\n[ffd319][b]❄︎Join Bot In Group\n[FFFFFF][b]/x/(teamcode)\n[ffd319][b]❀To Perform AnyEmote\n[FFFFFF][b]!e (uid) (emote) code)\n[ffd319]⚡Make 5 Player Group:\n[FFFFFF]❄️/5 \n[ffd319][b][c]🎵Make leave Bot \n[FFFFFF][b][c]©️/solo\n[00FF7F][B]!!admin Commond!!\n[ffd319][b]To Stop The Bot\n[FFFFFF][b]/stop\n[ffd319][b]To Mute Bot\n[FFFFFF][b]/mute (time)\n[C][B][FFB300]OWNER: SHAZZ\n[00FFFF]━━━━━━━━━━━━\n[00FF00]\n[00ff00][B]⚓Thankyou For Joining Our Guild⚓                            '
+                            message = '[C][B][00FFFF]━━━━━━━━━━━━\n[ffd319][B]☂︎Add 100 Likes\n[FFFFFF]/like/(uid)\n[ffd319][b]❄︎Join Bot In Group\n[FFFFFF][b]/x/(teamcode)\n[ffd319][b]❀To Perform AnyEmote\n[FFFFFF][b]!e (uid) (emote) code)\n[ffd319]⚡Make 5 Player Group:\n[FFFFFF]❄️/5 \n[ffd319][b][c]🎵Make leave Bot \n[FFFFFF][b][c]©️/solo\n[00FF7F][B]!!admin Commond!!\n[ffd319][b]To Stop The Bot\n[FFFFFF][b]/stop\n[ffd319][b]To Mute Bot\n[FFFFFF][b]/mute (time)\n[C][B][FFB300]OWNER: GMG\n[00FFFF]━━━━━━━━━━━━\n[00FF00]\n[00ff00][B]⚓Thankyou For Joining Our Guild⚓                            '
                             P = await SEndMsG(response.Data.chat_type , message , uid , chat_id , key , iv)
                             await SEndPacKeT(whisper_writer , online_writer , 'ChaT' , P)
                         response = None
@@ -704,7 +702,7 @@ async def MaiiiinE():
     await asyncio.sleep(1)
     task2 = asyncio.create_task(TcPOnLine(OnLineiP , OnLineporT , key , iv , AutHToKen))
     os.system('clear')
-    print(render('SHAZZ', colors=['white', 'green'], align='center'))
+    print(render('GMG', colors=['white', 'green'], align='center'))
     print('')
     #print(' - ReGioN => {region}'.format(region))
     print(f" - BoT STarTinG And OnLine on TarGet : {TarGeT} | BOT NAME : {acc_name}\n")
@@ -718,10 +716,5 @@ async def StarTinG():
         except asyncio.TimeoutError: print("Token ExpiRed ! , ResTartinG")
         except Exception as e: print(f"ErroR TcP - {e} => ResTarTinG ...")
 
-@app.route('/')
-def home():
-    return "Bot is running successfully!"
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=10000)
-	
+if __name__ == '__main__':
+    asyncio.run(StarTinG())
